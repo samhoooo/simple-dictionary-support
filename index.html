@@ -64,6 +64,20 @@
         border-top: 1px solid #e0e0e0;
       }
 
+      .download-section {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        margin: 40px 0;
+        text-align: center;
+      }
+
+      .download-section img {
+        width: 150px;
+        height: 150px;
+        margin-top: 15px;
+      }
+
       .contact-section {
         background: #f8f9fa;
         padding: 30px;
@@ -120,6 +134,22 @@
       >
         Understand words in plain English
       </p>
+
+      <div class="download-section">
+        <h2 style="color: #8b4513; margin-bottom: 10px">
+          Get the App
+        </h2>
+        <p>Download Simple Dictionary from the App Store.</p>
+        <a href="APP_STORE_LINK">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=APP_STORE_LINK"
+            alt="QR code to download Simple Dictionary"
+          />
+        </a>
+        <p style="margin-top: 15px">
+          <a href="APP_STORE_LINK">Download on the App Store</a>
+        </p>
+      </div>
 
       <div class="faq-item">
         <div class="faq-question">❓ What is Simple Dictionary?</div>
@@ -261,5 +291,14 @@
         <p>Simple Dictionary v1.0</p>
       </div>
     </div>
+    <script>
+      (function () {
+        var appStoreUrl = 'APP_STORE_LINK';
+        var isAppleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        if (isAppleDevice) {
+          window.location.href = appStoreUrl;
+        }
+      })();
+    </script>
   </body>
 </html>
